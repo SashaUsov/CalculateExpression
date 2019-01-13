@@ -1,19 +1,20 @@
-import java.util.Arrays;
+package simpleCalculator;
 
-class SumExpression implements Expression {
+public class SumExpression implements Expression {
 
     private final Expression right;
     private final Expression left;
 
     SumExpression(Expression right, Expression left) {
+
         this.right = right;
         this.left = left;
     }
 
     @Override
     public Double calculate() {
+
         return right.calculate() + left.calculate();
 
     }
-
 }

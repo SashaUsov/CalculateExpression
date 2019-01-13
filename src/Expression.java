@@ -1,3 +1,0 @@
-interface Expression {
-    Double calculate();
-}

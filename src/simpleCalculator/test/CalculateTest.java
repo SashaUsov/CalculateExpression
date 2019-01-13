@@ -1,10 +1,11 @@
+package simpleCalculator.test;
 
-import org.junit.Assert;
 import org.junit.Test;
+import simpleCalculator.Calculate;
+
+import static org.junit.Assert.assertEquals;
 
 public class CalculateTest {
-
-
 
     @Test
     public void sumTest() {
@@ -13,7 +14,7 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("10+5").calculate();
 
-                Assert.assertEquals(expectedSum, actual);
+                assertEquals(expectedSum, actual);
     }
 
     @Test
@@ -23,7 +24,7 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("15- 10").calculate();
 
-        Assert.assertEquals(expectedSum, actual);
+        assertEquals(expectedSum, actual);
     }
 
     @Test
@@ -33,7 +34,7 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("15+ 5-10-5+15").calculate();
 
-        Assert.assertEquals(expectedSum, actual);
+        assertEquals(expectedSum, actual);
     }
 
     @Test
@@ -43,7 +44,7 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("1*5").calculate();
 
-        Assert.assertEquals(expectedSum, actual);
+        assertEquals(expectedSum, actual);
     }
 
     @Test
@@ -53,7 +54,7 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("15/3").calculate();
 
-        Assert.assertEquals(expectedSum, actual);
+        assertEquals(expectedSum, actual);
     }
 
     @Test
@@ -63,7 +64,7 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("1*6/2+1*5-9+2*2.0").calculate();
 
-        Assert.assertEquals(expectedSum, actual);
+        assertEquals(expectedSum, actual);
     }
 
     @Test
@@ -73,7 +74,7 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("1*2.0+(3-2*1)").calculate();
 
-        Assert.assertEquals(expectedSum, actual);
+        assertEquals(expectedSum, actual);
     }
 
     @Test
@@ -83,6 +84,6 @@ public class CalculateTest {
 
         Double expectedSum = Calculate.covertToExpression("1*2.0+(3-2*1)+(2*1)+(6/2)").calculate();
 
-        Assert.assertEquals(expectedSum, actual);
+        assertEquals(expectedSum, actual);
     }
 }
